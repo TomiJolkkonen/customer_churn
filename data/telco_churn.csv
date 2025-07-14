@@ -1,0 +1,2 @@
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,Contract,MonthlyCharges,TotalCharges,Churn
+0001,Female,0,Yes,No,1,Yes,No,DSL,Month-to-month,29.85,29.85,No
