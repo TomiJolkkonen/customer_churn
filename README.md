@@ -1,17 +1,16 @@
-# Customer Churn Prediction
+# Customer Churn
+This project is converted to be Fabric + Power BI ready.
 
-Tämä projekti ennustaa asiakaspoistumaa koneoppimismallilla, joka on rakennettu Kerasin avulla.
+## Contents
+- `data/` sample CSV for local testing
+- `notebooks/01_ingest_transform.ipynb` — PySpark notebook to ingest CSV and write parquet to `../lake/curated/customer_churn`
+- `notebooks/02_analysis_or_model.ipynb` — analysis / model notebook
+- `sql/` SQL scripts to create views over curated data
+- `powerbi/` Power Query M and instructions to build the report
+- `lake/` (not included) — intended target for curated parquet in Fabric Lakehouse
 
-## Projektirakenne
-- `data/`: Sisältää raakadatana Telco churn datasetin.
-- `notebooks/`: Esikäsittely, mallin koulutus ja arviointi (Jupyter).
-- `src/`: Esiprosessointi, mallin koulutus ja ennustus.
-- `api/`: FastAPI-palvelu ennustuksille.
-- `azureml/`: AzureML pipeline määrittely.
-- `model/`: Tallennetut mallit.
+## How to use in Fabric
+1. Upload the `data/` files to your ADLS Gen2 or Lakehouse `lake/raw/customer_churn/`.
+2. Open the notebooks in Fabric, run `01_ingest_transform` to produce parquet under `lake/curated/customer_churn`.
+3. Use Power BI to connect to the curated location and create a report. See `powerbi/report_instructions.md`.
 
-## Käyttöohjeet
-
-### 1. Asenna riippuvuudet
-```bash
-pip install -r requirements.txt
