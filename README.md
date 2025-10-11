@@ -14,3 +14,4 @@ This project is converted to be Fabric + Power BI ready.
 2. Open the notebooks in Fabric, run `01_ingest_transform` to produce parquet under `lake/curated/customer_churn`.
 3. Use Power BI to connect to the curated location and create a report. See `powerbi/report_instructions.md`.
 
+<img width="1274" height="609" alt="image" src="https://github.com/user-attachments/assets/b30b57ca-98a3-44e2-ac20-1f43b0816855" />
